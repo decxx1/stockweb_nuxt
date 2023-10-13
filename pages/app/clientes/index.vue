@@ -175,8 +175,8 @@
     definePageMeta({
         middleware: ['init', 'pago'],
     });
-  import $ from 'jquery';
   import axios from 'axios';
+  import 'pdfmake';
   import DataTable from 'datatables.net-vue3'
   import 'datatables.net-buttons-bs4';
   import 'datatables.net-buttons/js/buttons.colVis.mjs';
@@ -373,7 +373,6 @@
             this.get_paises();
         },
         async mounted(){
-            window.jQuery = window.$ = $;
             this.events();
             await import("assets/jszip/jszip.min.js");
         },
