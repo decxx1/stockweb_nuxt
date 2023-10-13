@@ -36,8 +36,9 @@
               };
             },
             mounted() {
+              document.querySelector('#preloader').remove()
               this.$nextTick(()=> {
-                document.querySelector('#preloader').remove()
+                
                 const select = (el, all = false) => {
                   el = el.trim()
                   if (!el) {
