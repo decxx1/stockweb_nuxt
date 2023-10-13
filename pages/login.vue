@@ -90,7 +90,6 @@
 </template>
 
 <script setup>
-import $ from 'jquery';
 import Cookies from "js-cookie";
 definePageMeta({
     layout: "login",
