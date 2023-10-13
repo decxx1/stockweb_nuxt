@@ -122,7 +122,6 @@ useHead({
   ]
 })
 import $ from 'jquery';
-import notie from 'notie';
 </script>
 
 <script>

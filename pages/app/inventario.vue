@@ -644,7 +644,6 @@ definePageMeta({
 
 import $ from 'jquery';
 import axios from 'axios';
-import 'pdfmake';
 import DataTable from 'datatables.net-vue3'
 import 'datatables.net-buttons-bs4';
 import 'datatables.net-buttons/js/buttons.colVis.mjs';
