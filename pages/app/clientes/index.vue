@@ -177,7 +177,6 @@
     });
   import $ from 'jquery';
   import axios from 'axios';
-  import 'jszip';
   import 'pdfmake';
   import DataTable from 'datatables.net-vue3'
   import 'datatables.net-buttons-bs4';
@@ -374,8 +373,9 @@
             this.get_clientes();
             this.get_paises();
         },
-        mounted(){
+        async mounted(){
             this.events();
+            await import("assets/vendor/jszip/jszip.min.js");
         },
         beforeUnmount() {
             if ($.fn.DataTable.isDataTable('#example1')) {

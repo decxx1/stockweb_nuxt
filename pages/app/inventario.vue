@@ -644,7 +644,6 @@ definePageMeta({
 
 import $ from 'jquery';
 import axios from 'axios';
-import 'jszip';
 import 'pdfmake';
 import DataTable from 'datatables.net-vue3'
 import 'datatables.net-buttons-bs4';
@@ -1263,9 +1262,10 @@ export default {
 			this.get_proveedores();
 			this.updateprod();
 		},
-		mounted(){
+		async mounted(){
 			this.events();
-		},
+			await import("assets/vendor/jszip/jszip.min.js");
+;		},
         beforeUnmount() {
             if ($.fn.DataTable.isDataTable('#example1')) {
                 $('#example1').DataTable().destroy();
