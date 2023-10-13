@@ -61,9 +61,10 @@ useHead({
 </script>
 <script>
 import "@fortawesome/fontawesome-free/css/all.min.css"
-
+import "admin-lte/dist/js/adminlte.min.js"
+import "admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js"
 export default {
-    async mounted() {
+    mounted() {
         
         if (sessionStorage.getItem("mode") === "dark") {
             document.body.classList.add('dark-mode');
@@ -78,8 +79,7 @@ export default {
                 tables[i].classList.remove('table-dark');
             }
         }
-        await import("admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js")
-        await import("admin-lte/dist/js/adminlte.min.js")
+        
     }
 }
 </script>
