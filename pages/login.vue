@@ -90,6 +90,7 @@
 </template>
 
 <script setup>
+import $ from 'jquery';
 import Cookies from "js-cookie";
 definePageMeta({
     layout: "login",
@@ -233,6 +234,7 @@ export default {
     }
   },
   mounted() {
+    window.jQuery = window.$ = $;
     // Obtener los parámetros "email" y "hash" de la URL actual
 		var urlParams = new URLSearchParams(window.location.search);
 		var email = urlParams.get('email');

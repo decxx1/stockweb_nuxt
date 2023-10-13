@@ -121,7 +121,7 @@ useHead({
     { name: 'twitter:image', content: 'assets/img/logo.png' }
   ]
 })
-
+import $ from 'jquery';
 import notie from 'notie';
 </script>
 
@@ -130,6 +130,7 @@ import notie from 'notie';
 
 export default {
     async mounted() {
+      window.jQuery = window.$ = $;
         $('#newsletterForm').submit(function(event) {
         event.preventDefault(); //Prevent the default form submission
         $('#load1').prop('disabled', true);
