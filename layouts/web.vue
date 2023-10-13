@@ -16,7 +16,15 @@ useHead({
         {
             rel:"stylesheet",
             href:"/app/css/adminlte.min.css"
+        },
+        {
+            rel:"stylesheet",
+            href:"/assets/vendor/aos/aos.css"
         }
+
+    ],
+    script:[
+        { src:"assets/vendor/aos/aos.js"}
     ]
 })
 </script>
@@ -24,9 +32,6 @@ useHead({
 import "@fortawesome/fontawesome-free/css/all.min.css"
 export default {
     async mounted() {
-   
-        const AOS = await import('aos')
-        await import('aos/dist/aos.css')
         AOS.init({
             duration: 500,
             once: true,
