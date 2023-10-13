@@ -375,7 +375,7 @@
         },
         async mounted(){
             this.events();
-            await import("assets/vendor/jszip/jszip.min.js");
+            await import("assets/jszip/jszip.min.js");
         },
         beforeUnmount() {
             if ($.fn.DataTable.isDataTable('#example1')) {
