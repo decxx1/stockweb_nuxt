@@ -374,6 +374,7 @@
             this.get_paises();
         },
         async mounted(){
+            window.jQuery = window.$ = $;
             this.events();
             await import("assets/jszip/jszip.min.js");
         },

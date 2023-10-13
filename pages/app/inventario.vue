@@ -1263,6 +1263,7 @@ export default {
 			this.updateprod();
 		},
 		async mounted(){
+			window.jQuery = window.$ = $;
 			this.events();
 			await import("assets/jszip/jszip.min.js");
 ;		},
