@@ -29,7 +29,6 @@ useHead({
 <script>
 export default {
     async mounted() {
-        await import("admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js")
     }
 }
 </script>

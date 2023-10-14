@@ -37,7 +37,6 @@ export default {
             once: true,
             mirror: false
         });
-        await import("admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js")
     }
 }
 </script>

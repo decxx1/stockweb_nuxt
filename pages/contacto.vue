@@ -121,11 +121,50 @@ useHead({
     { name: 'twitter:image', content: 'assets/img/logo.png' }
   ]
 })
-
-
+import $ from 'jquery';
+import notie from 'notie';
 </script>
 
+<script>
 
+
+export default {
+    async mounted() {
+      window.jQuery = window.$ = $;
+        $('#newsletterForm').submit(function(event) {
+        event.preventDefault(); //Prevent the default form submission
+        $('#load1').prop('disabled', true);
+            grecaptcha.ready(function () {
+            grecaptcha.execute('6LeUaC0lAAAAACCITms44qBRANvTYaJ3yRFKB_yt', { action: 'submit' }).then(function (token) {
+                var recaptchaResponse = document.getElementById('recaptchaResponse');
+                recaptchaResponse.value = token;
+                // Making the simple AJAX call to capture the data and submit
+                var data = new FormData( $( '#newsletterForm' )[ 0 ] );
+                $.ajax({
+                        url: 'http://localhost/api/ajax.php',
+                        processData: false,
+                        contentType: false,
+                        type: 'POST',
+                        data: data,
+                        dataType: 'JSON',
+                        success: function(){
+                            notie.alert({ type: 'success', text: 'Tu mensaje fue enviado correctamente! Gracias por contactarnos.' });
+                            $("#newsletterForm")[0].reset();
+                            $('#load1').prop('disabled', false);
+                        },
+                        error: function(error){
+                            notie.alert({ type: 'error', text: 'Hubo un error al enviar el mensaje, intentelo de nuevo más tarde' });
+                            $('#load1').prop('disabled', false);
+                            console.error(error);
+                        }
+                    });
+                });
+            });
+        });
+    }
+}
+   
+</script>
 
 <style scope>
 @import 'notie/dist/notie.min.css';
