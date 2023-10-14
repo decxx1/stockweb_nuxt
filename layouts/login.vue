@@ -26,12 +26,7 @@ useHead({
     ]
 })
 </script>
-<script>
-export default {
-    async mounted() {
-    }
-}
-</script>
+
 <style>
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap";
 </style>
