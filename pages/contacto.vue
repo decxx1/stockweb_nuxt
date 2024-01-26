@@ -121,12 +121,12 @@ useHead({
     { name: 'twitter:image', content: 'assets/img/logo.png' }
   ]
 })
-import $ from 'jquery';
-import notie from 'notie';
+
 </script>
 
 <script>
-
+import $ from 'jquery';
+import notie from 'notie';
 
 export default {
     async mounted() {
