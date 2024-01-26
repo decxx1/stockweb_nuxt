@@ -2,10 +2,10 @@
   <h1>Politica de privacidad</h1>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
+definePageMeta({
+    layout: "web",
+});
 </script>
 
 <style>

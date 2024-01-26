@@ -2,10 +2,10 @@
   <h1>Aviso legal</h1>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
+definePageMeta({
+    layout: "web",
+});
 </script>
 
 <style>
